@@ -1,5 +1,6 @@
 <template>
   <div id="nav">
+    This is initial commit
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
