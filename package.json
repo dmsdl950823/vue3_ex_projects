@@ -45,14 +45,17 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-recommended",
+      "plugin:vue/essential",
       "@vue/standard",
       "@vue/typescript/recommended"
     ],
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "vue/no-use-v-if-with-v-for": "warn",
+      "vue/require-v-for-key": "warn"
+    }
   },
   "browserslist": [
     "> 1%",

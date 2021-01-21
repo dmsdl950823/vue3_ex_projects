@@ -1,3 +1,4 @@
 <template>
-  <router-view />
+  <div>Tree22
+  </div>
 </template>

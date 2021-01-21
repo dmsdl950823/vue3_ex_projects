@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       exampleList: [
-        { routeTo: '', title: 'tree1 - vanilla JS' },
+        { routeTo: 'tree1', title: 'tree1 - vanilla JS' },
         { routeTo: '', title: 'tree2 - Vue JS' },
         { routeTo: '', title: 'tree3 - Typescript' },
         { routeTo: '', title: 'Infinite Scroll' }
