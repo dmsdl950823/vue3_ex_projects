@@ -27,13 +27,15 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-standard": "^5.1.2",
-    "@vue/eslint-config-typescript": "^5.0.2",
-    "eslint": "^6.7.2",
+    "@vue/eslint-config-typescript": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^7.0.0-0",
+    "eslint-plugin-vue": "^7.6.0",
     "lint-staged": "^9.5.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
@@ -47,14 +49,16 @@
     "extends": [
       "plugin:vue/essential",
       "@vue/standard",
-      "@vue/typescript/recommended"
+      "@vue/typescript/recommended",
+      "@vue/typescript"
     ],
     "parserOptions": {
-      "ecmaVersion": 2020
+      "ecmaVersion": 2020,
+      "parser": "babel-eslint"
     },
     "rules": {
-      "vue/no-use-v-if-with-v-for": "warn",
-      "vue/require-v-for-key": "warn"
+      "vue/no-use-v-if-with-v-for": "error",
+      "vue/require-v-for-key": "error"
     }
   },
   "browserslist": [
