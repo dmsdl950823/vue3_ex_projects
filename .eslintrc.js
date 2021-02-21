@@ -3,37 +3,25 @@ module.exports = {
 	root: true,
 	// 추가적인 규칙들을 적용
 	extends: [
-		'eslint:recommended',
+		// 'eslint:recommended',
 		'plugin:vue/vue3-essential',
-		// 'plugin:vue/vue-essential',
-		// 'plugin:vue/vue3-recommended',
-		// 'plugin:vue/vue-recommended',
 		'plugin:vue/vue3-strongly-recommended',
-		// 'plugin:vue/vue-strongly-recommended',
-		'prettier',
-		'@vue/typescript',
-		'plugin:prettier/recommended',
+		'@vue/typescript/recommended'
 	],
+	parserOptions: {
+		sourceType: 'module',
+		parser: 'babel-eslint',
+
+    ecmaFeatures: {
+      legacyDecorators: true
+    }
+	},
 	// 코드 정리 플러그인 추가
-	plugins: ['prettier'],
 	// 사용자 편의 규칙 추가
 	rules: {
-		'prettier/prettier': [
-			'error',
-			// 아래 규칙들은 개인 선호에 따라 prettier 문법 적용
-			// https://prettier.io/docs/en/options.html
-			{
-				singleQuote: true,
-				semi: false,
-				useTabs: true,
-				tabWidth: 2,
-				trailingComma: 'all',
-				printWidth: 80,
-				bracketSpacing: true,
-				arrowParens: 'avoid',
-			},
-		],
+		"space-before-function-paren": ["error", "always"],
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 	},
 	env: {
 		browser: true,

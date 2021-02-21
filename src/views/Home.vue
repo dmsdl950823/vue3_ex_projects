@@ -1,11 +1,11 @@
 <template>
-	<div class="home">
-		<example-list />
+  <div class="home">
+    <example-list />
 
-		<div class="router-view">
-			<router-view />
-		</div>
-	</div>
+    <div class="router-view">
+      <router-view />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -18,16 +18,17 @@ import ExampleList from '@/components/ExampleList.vue'
 		ExampleList,
 	},
 	methods: {
-		ddd() {
+		ddd () {
 			const ddd = 'dddd'
 			console.log(ddd)
 			// const dd = (aa: any) => aa
 		},
 	},
-	data() {
+	data () {
 		return {}
 	},
 })
+
 export default class Home extends Vue {}
 </script>
 
