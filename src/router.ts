@@ -28,6 +28,6 @@ const router = createRouter({
   routes
 })
 
-console.log(createWebHashHistory)
+// console.log(createWebHashHistory)
 
 export default router

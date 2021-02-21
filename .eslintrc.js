@@ -3,10 +3,10 @@ module.exports = {
 	root: true,
 	// 추가적인 규칙들을 적용
 	extends: [
-		// 'eslint:recommended',
 		'plugin:vue/vue3-essential',
 		'plugin:vue/vue3-strongly-recommended',
-		'@vue/typescript/recommended'
+		'@vue/typescript/recommended',
+		'eslint:recommended',
 	],
 	parserOptions: {
 		sourceType: 'module',

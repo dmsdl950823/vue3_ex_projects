@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "css-loader": "^5.0.1",
     "normalize.css": "^8.0.1",
+    "smooth-scrollbar": "^8.6.0",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",

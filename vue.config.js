@@ -11,7 +11,7 @@ module.exports = {
 			scss: {
 				prependData: `
           @import "~@/style/style.scss";
-          `,
+				`,
 			},
 		},
 	},

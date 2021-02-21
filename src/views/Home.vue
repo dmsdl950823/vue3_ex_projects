@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <example-list />
+    <lists />
 
     <div class="router-view">
       <router-view />
@@ -10,23 +10,23 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import ExampleList from '@/components/ExampleList.vue'
+import Lists from './Lists.vue'
 
 @Options({
 	name: 'Home',
 	components: {
-		ExampleList,
+		Lists,
 	},
 	methods: {
 		ddd () {
 			const ddd = 'dddd'
 			console.log(ddd)
 			// const dd = (aa: any) => aa
-		},
+		}
 	},
 	data () {
 		return {}
-	},
+	}
 })
 
 export default class Home extends Vue {}
@@ -34,10 +34,11 @@ export default class Home extends Vue {}
 
 <style lang="scss" scoped>
 .home {
-	background: skyblue;
-}
-.router-view {
-	border: 1px solid red;
-	min-height: 20px;
+	width: inherit;
+	height: 100vh;
+	display: grid;
+  justify-content: center;
+  align-content: center;
+	border: 2px solid slateblue;
 }
 </style>
