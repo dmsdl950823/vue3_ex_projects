@@ -1,10 +1,12 @@
 <template>
   <div class="home">
-    <lists />
+    <section :class="['router-wrap', { '-home': !isHome }]">
+      <lists class="router-list" />
 
-    <div class="router-view">
-      <router-view />
-    </div>
+      <article class="router-view">
+        <router-view />
+      </article>
+    </section>
   </div>
 </template>
 
@@ -17,15 +19,20 @@ import Lists from './Lists.vue'
 	components: {
 		Lists,
 	},
-	methods: {
-		ddd () {
-			const ddd = 'dddd'
-			console.log(ddd)
-			// const dd = (aa: any) => aa
+	watch: {
+		'$route' (curr) {
+			this.isHome = curr === 'home'
 		}
 	},
+	created () {
+		console.log(this.$route)
+	},
+	methods: {
+	},
 	data () {
-		return {}
+		return {
+			isHome: true
+		}
 	}
 })
 
@@ -34,11 +41,22 @@ export default class Home extends Vue {}
 
 <style lang="scss" scoped>
 .home {
-	width: inherit;
+	width: 100vw;
 	height: 100vh;
-	display: grid;
-  justify-content: center;
-  align-content: center;
-	border: 2px solid slateblue;
+	overflow: hidden;
+	.router-wrap {
+		display: flex;
+		align-items: center;
+		&.-home {
+			transition: transform .3s ease; 
+			transform: translateX(-100vw);
+		}
+		> * {
+			// flex: 0 0 50vw;
+			flex: 0 0 100vw;
+			height: 100vh;
+			border: 1px solid cadetblue;
+		}
+	}
 }
 </style>
